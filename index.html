@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="icon" type="image/png" href="aviao.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <title>ViajeSe</title>
+</head>
+<body>
+    <div id="formulario">
+        <form>
+            <h1> <b>ViajeSe</b></h1> 
+            <h2><b> Formulário de Cadastro </b></h2>
+            <span> Insira seu nome completo: </span> <input type="text" id="nombre" autofocus><br>
+            <span> Insira seu telefone com DD: </span><input type="text" id="telefono" placeholder="(XX)XXXXX-XXXX"><br>
+            <span> Insira seu e-mail:  </span><input type="text" id="correo"><br>
+            <button type="button" class="btn btn-primary btn-lg" onclick="finalizar()"> Enviar </button>
+        </form>
+    </div>  
+    </form>
+  <img src="" alt="" id="fundo">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</body>
+</html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+function finalizar() {
+
+  if (nombre.value == "" || telefono.value == "" || correo.value == "") {
+    swal({
+      title: "Aviso",
+      text: "Preencha todos os campos!",
+      icon: "warning",
+      button: "ok",
+    });
+  } else {
+    swal ({
+      title: "Obrigada!",
+      text: "Aguarde o e-mail com todas as informações",
+      icon: "success",
+      button: "ok",
+    });
+  }
+}
+</script>
+
